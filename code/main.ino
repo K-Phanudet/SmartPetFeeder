@@ -151,31 +151,10 @@ int TD32_Set_Firebase(String path, String value, bool push ) {
   return httpCode;
 }
 
-/**********************************************************
- * ฟังกชั่น TD32_Push_Firebase
- * สำหรับ ESP32 ใช้กำหนด ค่า value ให้ path ของ Firebase
- * แบบ Pushing data (เติมเข้าไปที่ path เรื่อยๆ ไม่ทับของเดิม)
- * โดย path อยู่ใน รูปแบบ เช่น "Room/Sensor/DHT/Humid" เป็นต้น
- * 
- * ทั้ง path และ  value ต้องเป็น ข้อมูลประเภท String
- * และ คืนค่าฟังกชั่น กลับมาด้วย http code
- * 
- * เช่น หากเชื่อมต่อไม่ได้ จะคืนค่าด้วย 404 
- * หากกำหนดลงที่ Firebase สำเร็จ จะคืนค่า 200 เป็นต้น
- * 
- **********************************************************/
 int TD32_Push_Firebase(String path, String value){
     return TD32_Set_Firebase(path,value,true);
 }
-/**********************************************************
- * ฟังกชั่น TD32_Get_Firebase 
- * ใช้สำหรับ EPS32 รับ ค่า value ของ path ที่อยู่บน Firebase
- * โดย path อยู่ใน รูปแบบ เช่น "Room/Sensor/DHT/Humid" เป็นต้น
- * 
- * path เป็น ข้อมูลประเภท String
- * คืนค่าของฟังกชั่น คือ value ของ path ที่กำหนด ในข้อมูลประเภท String
- * 
- **********************************************************/
+
 String TD32_Get_Firebase(String path ) {
   WiFiClientSecure ssl_client;
   String host = String(FIREBASE_HOST); host.replace("https://", "");
