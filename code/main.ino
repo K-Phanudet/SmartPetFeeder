@@ -11,7 +11,7 @@ const char* ssid     = "TT_405";
 const char* password = "";
 
 #define FIREBASE_HOST "https://petfeeder-cddc0.firebaseio.com/"
-#define FIREBASE_AUTH "PzOg4oxbwpRnTDf1p9JxPfRhcST07m45TmdMEf2y"
+#define FIREBASE_AUTH "**"
 
 String  TD32_Get_Firebase(String path );
 int     TD32_Set_Firebase(String path, String value, bool push=false );
@@ -75,7 +75,7 @@ void loop() {
     if(timeWSec == Set[j]|| Button == "1"){
       Button = "0";
     TD32_Set_Firebase("Data/Button/b1","0");
-    Serial.println("Eattttttttttttttttttttttttttttttttt");
+    Serial.println("Feeding");
     ledcWrite(channel,21.5);
     delay(15000);
     ledcWrite(channel,10);
