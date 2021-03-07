@@ -1,0 +1,28 @@
+{
+    "Data" : {
+      "Button" : {
+        "b1" : 1
+      },
+      "set" : {
+        "setHour" : {
+          "H0" : "Null",
+          "H1" : "Null",
+          "H2" : "09",
+          "H3" : "Null",
+          "H4" : "22"
+        },
+        "setMinute" : {
+          "M0" : "Null",
+          "M1" : "Null",
+          "M2" : "01",
+          "M3" : "Null",
+          "M4" : "22"
+        }
+      }
+    },
+    "Sensor" : {
+      "Hum" : 81.0,
+      "Temp" : 21.0
+    }
+  }
+  
